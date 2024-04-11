@@ -1,13 +1,7 @@
-# Hivemind
+# AUTOLab Machine Stats
 
-**Hivemind** displays usage stats for the Berkeley EECS instructional
-computers. It was originally developed by [Allen Guo][allen-guo] and is now
-maintained by [HKN's Compserv committee][hkn-compserv] and hosted by the
-[OCF][ocf].
-
-[allen-guo]: https://github.com/guoguo12
-[hkn-compserv]: https://hkn.eecs.berkeley.edu/about/officers
-[ocf]: https://www.ocf.berkeley.edu
+This repo is forked from [**Hivemind**](https://github.com/compserv/hivemind) for
+Berkeley EECS instructional computers.
 
 ## How does it work?
 
@@ -15,11 +9,6 @@ Every five minutes, `backend/census.py` is executed. It connects to each server
 listed in `backend/server.txt` via SSH and collects information. The results
 from all of the servers are combined into a single JSON file
 (`data/latest.json`).
-
-You can view the most recently generated JSON file here:
-[https://www.ocf.berkeley.edu/~hkn/hivemind/data/latest.json][latest].
-
-[latest]: https://www.ocf.berkeley.edu/~hkn/hivemind/data/latest.json
 
 ### Overall load formula
 
@@ -34,8 +23,6 @@ If you would like to add / remove servers from the list, please file
 an issue or a pull request with your requested changes.
 
 The current list of servers is at [backend/servers.txt][servers.txt].
-
-[servers.txt]: https://github.com/compserv/hivemind/blob/master/backend/servers.txt
 
 ## Development
 
@@ -60,15 +47,3 @@ harder to set up:
 You should then be able to execute `census.py` to grab data from each server in
 `servers.txt`. The results are printed to stdout, which `run_census` puts into
 a file for the frontend to fetch.
-
-
-## Credits
-
-Hivemind was made using jQuery, Vue.js, Moment.js, Skeleton, clipboard.js, and Hint.css.
-
-Thanks to [Allen Guo][allen-guo], the original author, and the [OCF][ocf] for their
-generous support and hosting.
-
-This site was developed with the support of the [EECS Instructional Support Group][isg].
-
-[isg]: https://inst.eecs.berkeley.edu/ 

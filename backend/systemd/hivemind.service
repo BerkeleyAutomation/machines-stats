@@ -4,5 +4,5 @@ ConditionHost=vampires
 
 [Service]
 Type=oneshot
-ExecStart=/home/h/hk/hkn/hivemind/backend/run_census > /dev/null
+ExecStart=/home/a/au/autolab/status/backend/run_census > /dev/null
 TimeoutSec=5m

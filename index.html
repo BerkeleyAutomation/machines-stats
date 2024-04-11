@@ -5,9 +5,8 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>Hivemind - Server Stats</title>
-  <meta name="description" content="Usage stats for the Berkeley EECS instructional computers.">
-  <meta name="author" content="Allen Guo">
+  <title>AUTOLab Machines Stats</title>
+  <meta name="description" content="Usage stats for AUTOLab machines.">
 
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -31,18 +30,18 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div id="top">
     <div class="container">
-      <a href="#" id="title">Hivemind</a>
-      <a href="https://github.com/compserv/hivemind" id="gh-link" target="_blank">View on GitHub</a>
+      <a href="#" id="title">AUTOLab Machines</a>
+      <a href="https://github.com/BerkeleyAutomation/machines-stats" id="gh-link" target="_blank">GitHub</a>
     </div>
   </div>
 
   <div class="container" id="main" v-cloak>
     <div class="row box warning" v-if="offline && dataLoaded">
-      <p>Hivemind is currently not being updated. Operations will resume in August 2018.</p>
+      <p>Status is currently not being updated.</p>
       <p>The data below is from <b>{{ lastUpdate | formatTime }}</b>.</p>
     </div>
     <div class="row box" v-else>
-      <p>This site displays usage stats for the Berkeley EECS instructional computers.</p>
+      <p>This site displays usage stats for AUTOLab machines.</p>
       <p v-if="dataLoaded">
         The data below was gathered <b>{{ lastUpdate | timeSince }}</b>. Refresh to check for updates.
       </p>
@@ -52,7 +51,7 @@
     </div>
     <div class="row box warning" v-if="failed">
       <p>Couldn't retrieve latest data. Try again later?</p>
-      <p>If the issue persists, please email HKN at <a href="mailto:compserv@hkn.eecs.berkeley.edu">compserv@hkn.eecs.berkeley.edu</a>.</p>
+      <p>If the issue persists, please contact AUTOLab sysadmins through email or Slack.</p>
     </div>
 
     <div class="row" v-if="dataLoaded">
@@ -89,13 +88,7 @@
       </table>
     </div>
 
-    <div id="footer" v-if="dataLoaded">
-      This site was developed with the support of the EECS Instructional Support
-      Group, but is independently student-operated by
-      <a href="https://hkn.eecs.berkeley.edu">HKN</a>.
-      <br>
-      This site uses Google Analytics to better understand user behavior. Learn more or opt out <a href="https://support.google.com/analytics/answer/6004245" target="_blank">here</a>.
-      <br>
+    <div id="footer" >
       <a href="https://www.ocf.berkeley.edu">
         <img src="https://www.ocf.berkeley.edu/hosting-logos/ocf-hosted-penguin-dark.svg" alt="Hosted by the OCF" style="border: 0;" />
       </a>
@@ -109,14 +102,6 @@
   <script src="js/moment.js"></script>
   <script src="js/clipboard.min.js"></script>
   <script src="js/main.js?t=1"></script>
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    ga('create', 'UA-43676088-3', 'auto');
-    ga('send', 'pageview');
-  </script>
 </body>
 </html>
